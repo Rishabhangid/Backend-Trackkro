@@ -12,6 +12,8 @@ const CLIENT_URL = process.env.CLIENT_URL;
 // CONNECTING DATABASE & MIDDLEWARES
 const corsOptions = {
     origin: CLIENT_URL,  // Set this to the URL of your front-end
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true
     // optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions)); // for hosting porpuse
